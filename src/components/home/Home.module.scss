@@ -1,0 +1,160 @@
+.homeWeather {
+    width: 38%;
+    padding: 15px;
+}
+
+.boxSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 20px;
+
+    .titleSearch {
+        margin-right: 8px;
+
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+
+    .inputSearch {
+        display: flex;
+        border: 1px solid #999;
+        border-radius: 5px;
+        padding: 5px 10px;
+
+        align-items: center;
+
+        svg {
+            font-size: 2rem;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
+        input {
+            outline: none;
+            border: none;
+        }
+    }
+
+    .colorError {
+        border: 1px solid red;
+    }
+}
+
+.notFoundCity {
+    margin: 4px 0 0px 130px;
+    color: #f33a58;
+    font-size: 12.8px;
+    font-weight: 600;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.presentTime {
+    color: rgb(82, 79, 79);
+    font-size: 1.4rem;
+    opacity: 0.8;
+    margin-top: 50px;
+
+    text-align: center;
+}
+
+.rainNotification {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15px;
+    color: #3f84e2;
+    font-size: 1.5rem;
+    border: 1px solid #3f84e2;
+    padding: 5px 2px;
+    border-radius: 10px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    
+}
+
+.weatherInfo {
+    margin-top: 20px;
+
+    .mainInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .currentWeatherPhoto {
+            // background: url('../../assets/images/weather3.gif');
+            img {
+                height: 150px;
+                width: 160px;
+            }
+            // background-repeat: no-repeat;
+        }
+
+        .temperature {
+            position: relative;
+            font-size: 5rem;
+            font-weight: 600;
+            margin-left: 10px;
+
+            &::after {
+                position: absolute;
+                content: "o";
+                display: block;
+                right: -11px;
+                top: -4px;
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            &::before {
+                position: absolute;
+                content: "C";
+                display: block;
+                right: -29px;
+                top: -3px;
+                font-size: 28px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .nameCity {
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .infoSupplement {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        
+        .humidity {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 50px;
+        }
+        
+        .windSpped {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h3 {
+            font-size: 1.7rem;
+            opacity: 0.8;
+            color:rgb(82, 79, 79);
+            margin-bottom: 10px;
+        }
+
+        .parameter {
+            font-size: 1.9rem;
+        }
+    }
+}

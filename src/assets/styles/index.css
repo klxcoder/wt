@@ -1,0 +1,38 @@
+/* Reset css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-family: "Nunito", sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 62.5%;
+    line-height: 1.6rem;
+
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    background: #999;
+}
+
+.App {
+}
+
+.wapperAppWeather {
+    display: flex;
+    background: white;
+    width: 1000px;
+    height: 510px;
+    margin: 0 auto;
+    
+    border-radius: 25px;
+    overflow: hidden;
+
+    margin-top: 60px;
+}
