@@ -1,19 +1,30 @@
-import React from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 // libary Chartjs
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { useSelector } from 'react-redux';
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
 function LineChart() {
+
+    const [value, setValue] = useState()
+    const data = useSelector(state => state.api)
+
+    // update linechart every time the temperature changes
+    useLayoutEffect(() => {
+        const total = data.weekWeather.map(data => data.main.temp)
+        setValue(total)
+    }, [data])
+
 
     return (
         <div>
             <Line
                 data={{
-                    labels: ['', '', '', '', '', ''],
+                    labels: ['', '', '', '', '', '', '',],
                     datasets: [{
                         label: null,
-                        data: [20, 15, 30, 25, 50, 30, 70],
+                        data: value,
                         borderColor: '#70a0e8',
                         backgroundColor: '#e0e7f3',
                         pointRadius: 0,
@@ -30,6 +41,8 @@ function LineChart() {
                             display: false,
                         },
                         y: {
+                            min: -5,
+                            max: 35,
                             display: false,
                         }
                     },
